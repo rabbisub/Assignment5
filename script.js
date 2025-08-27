@@ -55,6 +55,7 @@ document.getElementById('clearHistoryBtn').addEventListener('click',function(e){
 
 
 
+
 /////////////////////////////////////first card all features/////////////////////////////
 
 
@@ -101,7 +102,20 @@ document.getElementById('nationalEcallBtn').addEventListener('click',function(e)
         
 })
 
+////////Paste Button
 
+
+
+//////////////////////////////////////////2nd card/////////////////////
+// heart counting 
+document.getElementById('policHeartBtn').addEventListener('click',function(e){
+    e.preventDefault()
+    const heartCount= innerTextInt('nav-heart-count')
+    const updateCount = heartCount + 1
+    heartCountUpdate(updateCount)
+
+
+})
 
 
 
