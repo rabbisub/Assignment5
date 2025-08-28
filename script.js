@@ -17,7 +17,10 @@ function innerText(id){
 function heartCountUpdate(id){
     document.getElementById('nav-heart-count').innerText=id
 }
-
+//paste update 
+function pastCount(id){
+document.getElementById('nav-copy-count').innerText=id
+}
 ////////////////////////////////// history up function /////////////////////////////
 function updateHistory(){
 const time= new Date();
@@ -102,8 +105,20 @@ document.getElementById('nationalEcallBtn').addEventListener('click',function(e)
         
 })
 
-////////Paste Button
 
+
+////////Paste Button
+document.getElementById('nationalEcopyBtn').addEventListener('click',function(e){
+    e.preventDefault()
+    const navCopy=innerTextInt('nav-copy-count')
+    const copyText=innerText('nationalEnumber')
+    navigator.clipboard.writeText(copyText)
+    alert("Copied " + copyText);
+
+    const copy= navCopy + 1
+    pastCount(copy)
+
+})
 
 
 //////////////////////////////////////////2nd card/////////////////////
@@ -116,6 +131,7 @@ document.getElementById('policHeartBtn').addEventListener('click',function(e){
 
 
 })
+
 
 
 
